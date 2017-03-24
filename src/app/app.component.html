@@ -15,12 +15,11 @@
                       [isOpen]="isOpen"
                       [type]="type"
                       [enableDates]="enableDates"
-                      [disableDates]="disableDates"
-                      [disableWeekDays]="disableWeekDays"
                       [min]="minDate"
                       [max]="maxDate"
                       [mode]="mode"
                       [container]="container"
+                      (change)="handleChange($event)"
                       #dateControl="ngModel"></md2-datepicker>
       <p> Value: {{ date }} </p>
       <p> Touched: {{ dateControl.touched }} </p>

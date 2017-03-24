@@ -53,7 +53,7 @@ export class AppComponent implements OnInit{
     this.isOpen = true;
     setTimeout(() => {
       this.isOpen = false;
-    }, 1000);
+    }, 100);
   }
 
   setDate() {
@@ -69,6 +69,13 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     setTimeout(() => {
     this.openDatepicker()
-    }, 1000);
+    }, 100);
+  }
+  handleChange(value){
+    console.log("value",value);
+    this.isOpenOnFocus = true;
+    setTimeout(() => {
+      this.openDatepicker()
+    }, 100);
   }
 }
